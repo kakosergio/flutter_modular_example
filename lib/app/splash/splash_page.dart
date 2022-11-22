@@ -20,9 +20,13 @@ class SplashPage extends StatelessWidget {
                     arguments: 'Subi a escada de São Paulo'),
                 child: const Text('Categoria')),
             TextButton(
-                onPressed: () => Modular.to.pushNamed('/product/',
+                onPressed: () => Modular.to.pushNamed('/product/Produto_X',
                     arguments: 'Subi a escada de São Paulo'),
-                child: const Text('Produtos'))
+                child: const Text('Produtos')),
+            TextButton(
+                onPressed: () => Modular.to.pushNamed('/product/xyz?nome=Produto_Y',
+                    arguments: 'Subi a escada de São Paulo'),
+                child: const Text('Produtos Query Params'))
           ],
         ),
       ),

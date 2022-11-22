@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class ProductPage extends StatelessWidget {
+class Product2Page extends StatelessWidget {
   final String? nome;
-  const ProductPage({Key? key, required this.nome}) : super(key: key);
+  const Product2Page({Key? key, required this.nome}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ProductPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(Modular.args.params['nome']),
+          Text(Modular.args.queryParams['nome'] ?? 'Não encontrado'),
           Text(nome ?? 'nome não enviado'),
         ],
       ),

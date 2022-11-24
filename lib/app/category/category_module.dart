@@ -7,7 +7,7 @@ import 'package:flutter_modular_example/app/category/model/price_model.dart';
 class CategoryModule extends Module{
   @override
   List<Bind<Object>> get binds => [
-    Bind.lazySingleton((i) => PriceModel()),
+    Bind.lazySingleton((i) => PriceModel(), export: true),
     Bind.lazySingleton((i) => CategoryController(priceModel: i()))
   ];
 
